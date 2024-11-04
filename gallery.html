@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Burger Menu Content -->
+  <input type="checkbox" id="burger-toggle">
+  <label for="burger-toggle" class="burger-menu">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </label>
+  <div class="menu">
+    <div class="menu-inner">
+      <ul class="menu-nav">
+        <li class="menu-nav-item"><a class="menu-nav-link" href="index.html"><div>About Me</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="experiences.html"><div>Experiences</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="project.html"><div>Project</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="gallery.html"><div>Places Mark's been to</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="games.html"><div>Games</div></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header>
+    <h1>Places Mark has been to</h1>
+    <h3>Camera used to take pics: Canon R, Ricoh GRiii, iPhone 15 Pro, iPhone 12</h3>
+  </header>
+
+  <!-- Filter Section -->
+  <section class="filter-buttons">
+    <label for="city-dropdown">Select City:</label>
+    <select id="city-dropdown" onchange="filterGallery()">
+      <option value="all">All</option>
+      <option value="new-york">New York</option>
+      <option value="los-angeles">Los Angeles</option>
+      <option value="san-francisco">San Francisco</option>
+    </select>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <div class="gallery-item" data-tag="new-york"><img src="imgs/bos/12219002-2DFF-472B-B5BA-E0BF51AF9582_1_105_c.jpeg" alt="City Photo"></div>
+    <div class="gallery-item" data-tag="los-angeles"><img src="imgs/chicago/3ABB7921-5B34-4118-A826-EA858047142A_1_105_c.jpeg" alt="Portrait Photo"></div>
+    <div class="gallery-item" data-tag="new-york"><img src="imgs/atl/3FE41F15-8896-4A34-8D4A-1747409F5FF9_1_105_c.jpeg" alt="Nature Photo"></div>
+    <div class="gallery-item" data-tag="san-francisco"><img src="imgs/london/928D99A6-82FA-4D63-94D2-966FBC613F84_1_105_c.jpeg" alt="City Photo"></div>
+    <div class="gallery-item" data-tag="new-york"><img src="imgs/ny/60E75AC5-B2BF-407D-8B29-F82EEB1A50DF_1_105_c.jpeg" alt="Nature Photo"></div>
+    <div class="gallery-item" data-tag="los-angeles"><img src="imgs/chicago/47B9B4C2-B1D9-4CDC-A7F0-A69494C0D1D8_1_105_c.jpeg" alt="Portrait Photo"></div>
+  </section>
+
+  <!-- Modal Structure -->
+  <div id="image-modal" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modal-image">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

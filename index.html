@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Jang | Personal Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KL59NTYLZE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KL59NTYLZE');
+    </script>
+  </head>
+<body>
+  <!-- Burger Menu Toggle and Label -->
+  <input type="checkbox" id="burger-toggle">
+  <label for="burger-toggle" class="burger-menu">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </label>
+
+  <!-- Burger Menu Content -->
+  <div class="menu">
+    <div class="menu-inner">
+      <ul class="menu-nav">
+        <li class="menu-nav-item"><a class="menu-nav-link" href="index.html"><span>
+              <div>About Me</div>
+            </span></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="experiences.html"><span>
+              <div>Experiences</div>
+            </span></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="project.html"><span>
+              <div>Project</div>
+            </span></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="gallery.html"><span>
+              <div>Places Mark's been to</div>
+            </span></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="blog.html"><span>
+              <div>Notes</div>
+            </span></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="games.html"><span>
+              <div>Games</div>
+            </span></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Split Layout Container -->
+  <div class="split-container">
+    <!-- Left Side (Image) -->
+    <div class="left-side">
+      <img src="imgs/index.png" alt="MarkJang">
+    </div>
+
+    <!-- Right Side (Info) -->
+    <div class="right-side">
+      <h2>Hey There! I am</h2>
+      <h1>Mark Yehoon Jang {장예훈}</h1>
+      <p></p>
+      <p></p>
+
+      <!-- Links Section -->
+      <section class="social-links">
+        <h3>You can find me on</h3>
+        <div class="icons">
+          <a href="https://github.com/markjang03" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mark-jang/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?hl=en&user=EXjsnBUAAAAJ" target="_blank" aria-label="Google Scholar">
+              <img src="imgs/google-scholar.svg" alt="Google Scholar" width="24" height="24" />
+          </a>
+        </div>
+        <a href="mailto:markjang03@gmail.com" aria-label="Email" style="color: black;">
+          <i class="fas fa-envelope"></i> markjang03[at]gmail[dot]com
+        </a>
+      </section>
+    </div>
+
+  </div>
+
+
+  <footer>
+    <p>&copy; 2024 Mark Y. Jang. All rights reserved.</p>
+  </footer>
+</body>
+</html>

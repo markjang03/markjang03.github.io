@@ -1,0 +1,51 @@
+---
+layout: default
+title: Project
+permalink: /project.html
+---
+
+<div class="section-container">
+  <h2>Projects</h2>
+
+  <!-- Active Section -->
+  <h3>Active</h3>
+  <div class="project-section">
+    {% for post in site.posts %}
+      {% if post.status == "active" %}
+        <div class="card">
+          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
+          <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Inactive Section -->
+  <h3>Inactive</h3>
+  <div class="project-section">
+    {% for post in site.posts %}
+      {% if post.status == "inactive" %}
+        <div class="card">
+          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
+          <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <!-- Archive Section -->
+  <h3>Archive</h3>
+  <div class="project-section">
+    {% for post in site.posts %}
+      {% if post.status == "archive" %}
+        <div class="card">
+          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+          <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
+          <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

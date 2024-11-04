@@ -1,0 +1,4 @@
+baseurl: ""  # the subpath of your site, e.g., /blog
+title: "Mark Jang"
+exclude:
+  - "assets/main.css" # If you only want to exclude this on specific pages, you'll need to edit the HTML templates
