@@ -3,67 +3,279 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | Mark Jang</title>
+  <title> | Mark Jang</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header>
-    <input type="checkbox" id="burger-toggle">
+  </header>
+
+  <main class="page-content">
+    <h1></h1>
+    <p class="project-description"></p>
+    <time></time>
+
+
+    
+      <div class="project-details">
+        <p><header>
+  <!-- Burger Menu Content -->
+  <input type="checkbox" id="burger-toggle">
   <label for="burger-toggle" class="burger-menu">
     <div class="line"></div>
     <div class="line"></div>
     <div class="line"></div>
   </label>
 
-  <!-- Burger Menu Content -->
   <div class="menu">
     <div class="menu-inner">
       <ul class="menu-nav">
-        <li class="menu-nav-item"><a class="menu-nav-link" href="index.html"><span>
-              <div>About Me</div>
-            </span></a></li>
-        <li class="menu-nav-item"><a class="menu-nav-link" href="experiences.html"><span>
-              <div>Experiences</div>
-            </span></a></li>
-        <li class="menu-nav-item"><a class="menu-nav-link" href="project.html"><span>
-              <div>Project</div>
-            </span></a></li>
-        <li class="menu-nav-item"><a class="menu-nav-link" href="gallery.html"><span>
-              <div>Places Mark's been to</div>
-            </span></a></li>
-        <li class="menu-nav-item"><a class="menu-nav-link" href="blog.html"><span>
-              <div>Notes</div>
-            </span></a></li>
-        <li class="menu-nav-item"><a class="menu-nav-link" href="games.html"><span>
-              <div>Games</div>
-            </span></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="index.html"><div>About Me</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="experiences.html"><div>Experiences</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="project.html"><div>Project</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="gallery.html"><div>Places Mark's been to</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="blog.html"><div>Notes</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="games.html"><div>Games</div></a></li>
       </ul>
     </div>
   </div>
-  </header>
+</header>
 
-  <main class="page-content">
-    <div class="section-container">
-  <h2>Blog Posts</h2>
-  <ul>
+<div class="section-container-category">
+  <h2>Latest</h2>
+  <ul id="post-list">
     
       <li>
-        <a href="/2024/11/03/sample-post.md.html">Sample Project</a>
-        <time>November 3, 2024</time>
+        <a href="/ds/2024/11/05/dun-dun-dungeon.html" class="brown-link">나의 첫 블로그 포스트</a>
+
+        <time>November 5, 2024</time>
       </li>
     
       <li>
-        <a href="/2024/11/03/AWS.html">Sample Project</a>
-        <time>November 3, 2024</time>
+        <a href="/hardware/2024/09/15/apple-tsmc-tapeout.html" class="brown-link">Apple/TSMC Tapeout Project</a>
+
+        <time>September 15, 2024</time>
       </li>
     
       <li>
-        <a href="/2024/11/03/aws.html">Sample Project</a>
-        <time>November 3, 2024</time>
+        <a href="/ml/2024/09/01/RAG.html" class="brown-link">Retrieval-Augmented Generation (RAG for MDF)</a>
+
+        <time>September 1, 2024</time>
       </li>
     
   </ul>
+  <button id="view-more" onclick="showAllPosts()">View More</button>
 </div>
+
+<div class="category-container">
+  <h2>Categories</h2>
+  <ul>
+    <li>
+      <h3 onclick="toggleCategory('aws')">AWS / Cloud Computing</h3>
+      <ul id="aws" class="category-list" style="display: none;">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a href="/aws/2024/04/15/aws.html" class="brown-link">AWS Serverless Photogallery</a>
+
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </li>
+    <li>
+      <h3 onclick="toggleCategory('hardware')">Hardware Development</h3>
+      <ul id="hardware" class="category-list" style="display: none;">
+        
+          
+        
+          
+          <a href="/hardware/2024/09/15/apple-tsmc-tapeout.html" class="brown-link">Apple/TSMC Tapeout Project</a>
+
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a href="/hardware/2023/12/05/electric-grid-kit.html" class="brown-link">Electric Grid Educational Kit (GA K-6)</a>
+
+          
+        
+          
+          <a href="/hardware/2023/11/15/baby-processor.html" class="brown-link">5-stage Pipelined Baby Processor</a>
+
+          
+        
+          
+          <a href="/hardware/2023/10/10/proximity-surveillance.html" class="brown-link">Proximity Surveillance System</a>
+
+          
+        
+          
+          <a href="/hardware/2023/09/01/fpga-design-project.html" class="brown-link">FPGA Design Project</a>
+
+          
+        
+      </ul>
+    </li>
+    <li>
+      <h3 onclick="toggleCategory('ml')">Machine Learning</h3>
+      <ul id="ml" class="category-list" style="display: none;">
+        
+          
+        
+          
+        
+          
+          <a href="/ml/2024/09/01/RAG.html" class="brown-link">Retrieval-Augmented Generation (RAG for MDF)</a>
+
+          
+        
+          
+          <a href="/ml/2024/08/01/hyundai-project.html" class="brown-link">Hyundai Interface Design Project</a>
+
+          
+        
+          
+          <a href="/ml/2024/07/10/bitcoin-trading-ddpg.html" class="brown-link">Bitcoin Trading with DDPG</a>
+
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </li>
+    <li>
+      <h3 onclick="toggleCategory('backend')">Backend and Databases</h3>
+      <ul id="backend" class="category-list" style="display: none;">
+        
+          
+          <a href="/ds/2024/11/05/dun-dun-dungeon.html" class="brown-link">나의 첫 블로그 포스트</a>
+
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a href="/ds/2024/01/20/drone-dispatch.html" class="brown-link">Drone Dispatch! Express Delivery</a>
+
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </li>
+
+    <li>
+      <h3 onclick="toggleCategory('cs')">Software Engineering</h3>
+      <ul id="cs" class="category-list" style="display: none;">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a href="/cs/2024/05/01/hp.html" class="brown-link">Personal Project</a>
+
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<script>
+  function showAllPosts() {
+    document.getElementById('post-list').innerHTML = `<li><a href="/ds/2024/11/05/dun-dun-dungeon.html" class="brown-link">나의 첫 블로그 포스트</a><time>November 5, 2024</time></li><li><a href="/hardware/2024/09/15/apple-tsmc-tapeout.html" class="brown-link">Apple/TSMC Tapeout Project</a><time>September 15, 2024</time></li><li><a href="/ml/2024/09/01/RAG.html" class="brown-link">Retrieval-Augmented Generation (RAG for MDF)</a><time>September 1, 2024</time></li><li><a href="/ml/2024/08/01/hyundai-project.html" class="brown-link">Hyundai Interface Design Project</a><time>August 1, 2024</time></li><li><a href="/ml/2024/07/10/bitcoin-trading-ddpg.html" class="brown-link">Bitcoin Trading with DDPG</a><time>July 10, 2024</time></li><li><a href="/cs/2024/05/01/hp.html" class="brown-link">Personal Project</a><time>May 1, 2024</time></li><li><a href="/aws/2024/04/15/aws.html" class="brown-link">AWS Serverless Photogallery</a><time>April 15, 2024</time></li><li><a href="/ds/2024/01/20/drone-dispatch.html" class="brown-link">Drone Dispatch! Express Delivery</a><time>January 20, 2024</time></li><li><a href="/hardware/2023/12/05/electric-grid-kit.html" class="brown-link">Electric Grid Educational Kit (GA K-6)</a><time>December 5, 2023</time></li><li><a href="/hardware/2023/11/15/baby-processor.html" class="brown-link">5-stage Pipelined Baby Processor</a><time>November 15, 2023</time></li><li><a href="/hardware/2023/10/10/proximity-surveillance.html" class="brown-link">Proximity Surveillance System</a><time>October 10, 2023</time></li><li><a href="/hardware/2023/09/01/fpga-design-project.html" class="brown-link">FPGA Design Project</a><time>September 1, 2023</time></li>`;
+    document.getElementById('view-more').style.display = 'none';
+    document.getElementById('view-more').style.color = '#8d6e63';  // 따뜻한 갈색
+
+  }
+
+  function toggleCategory(id) {
+    const categoryList = document.getElementById(id);
+    categoryList.style.display = categoryList.style.display === 'none' ? 'block' : 'none';
+  }
+</script>
+</p>
+      </div>
+    
   </main>
 
   <footer>

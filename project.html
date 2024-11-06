@@ -1,51 +1,109 @@
 ---
 layout: default
-title: Project
+title: Projects
 permalink: /project.html
 ---
 
-<div class="section-container">
-  <h2>Projects</h2>
 
-  <!-- Active Section -->
-  <h3>Active</h3>
-  <div class="project-section">
-    {% for post in site.posts %}
-      {% if post.status == "active" %}
-        <div class="card">
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-          <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
-          <time>{{ post.date | date: "%B %-d, %Y" }}</time>
-        </div>
-      {% endif %}
-    {% endfor %}
+<body>
+  <header>
+    <!-- Burger Menu Content -->
+    <input type="checkbox" id="burger-toggle">
+    <label for="burger-toggle" class="burger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+
+    <div class="menu">
+      <div class="menu-inner">
+        <ul class="menu-nav">
+          <li class="menu-nav-item"><a class="menu-nav-link" href="index.html"><div>About Me</div></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="experiences.html"><div>Experiences</div></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="project.html"><div>Project</div></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="gallery.html"><div>Places Mark's been to</div></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="blog.html"><div>Notes</div></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="games.html"><div>Games</div></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="section-container">
+    <h4>Click each section to view the projects</h4>
+
+    <!-- Active Section -->
+    <h3 class="toggle-header" onclick="toggleSection('active-section', this)">Active <span class="toggle-icon">▶</span></h3>
+    <div id="active-section" class="project-section">
+      <div class="card-grid">
+        {% for post in site.posts %}
+          {% if post.status == "active" %}
+            <div class="card">
+              <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+              <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
+              <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Inactive Section -->
+    <h3 class="toggle-header" onclick="toggleSection('inactive-section', this)">Inactive <span class="toggle-icon">▶</span></h3>
+    <div id="inactive-section" class="project-section">
+      <div class="card-grid">
+        {% for post in site.posts %}
+          {% if post.status == "inactive" %}
+            <div class="card">
+              <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+              <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
+              <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Archive Section -->
+    <h3 class="toggle-header" onclick="toggleSection('archive-section', this)">Archive <span class="toggle-icon">▶</span></h3>
+    <div id="archive-section" class="project-section">
+      <div class="card-grid">
+        {% for post in site.posts %}
+          {% if post.status == "archive" %}
+            <div class="card">
+              <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+              <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
+              <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
 
-  <!-- Inactive Section -->
-  <h3>Inactive</h3>
-  <div class="project-section">
-    {% for post in site.posts %}
-      {% if post.status == "inactive" %}
-        <div class="card">
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-          <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
-          <time>{{ post.date | date: "%B %-d, %Y" }}</time>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+</body>
 
-  <!-- Archive Section -->
-  <h3>Archive</h3>
-  <div class="project-section">
-    {% for post in site.posts %}
-      {% if post.status == "archive" %}
-        <div class="card">
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-          <p>{{ post.description }} <a href="{{ post.url }}">Read More</a></p>
-          <time>{{ post.date | date: "%B %-d, %Y" }}</time>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
+
+
+<script>
+  function toggleSection(id, header) {
+    const section = document.getElementById(id);
+    const icon = header.querySelector(".toggle-icon");
+    if (section.style.display === 'none') {
+      section.style.display = 'block';
+      icon.textContent = '>';
+    } else {
+      section.style.display = 'none';
+      icon.textContent = '▶';
+    }
+  }
+
+  // Hide all sections by default
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('active-section').style.display = 'none';
+    document.getElementById('inactive-section').style.display = 'none';
+    document.getElementById('archive-section').style.display = 'none';
+  });
+</script>
+

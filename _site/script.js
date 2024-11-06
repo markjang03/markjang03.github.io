@@ -98,22 +98,41 @@ function resetGame() {
 // 초기 보드 생성
 createBoard();
 
-// Function to open the modal and display the clicked image
-function openModal(imageSrc) {
-  const modal = document.getElementById("image-modal");
-  const modalImg = document.getElementById("modal-image");
 
-  modal.style.display = "flex"; // Show the modal
-  modalImg.src = imageSrc;      // Set the modal image source to the clicked image
+// Gallery Filtering Function
+function filterGallery() {
+  const dropdown = document.getElementById('city-dropdown');
+  const selectedCity = dropdown.value;
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  galleryItems.forEach(item => {
+    if (selectedCity === 'all' || item.dataset.tag === selectedCity) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
 }
-
-// Function to close the modal
-function closeModal() {
-  const modal = document.getElementById("image-modal");
-  modal.style.display = "none"; // Hide the modal
-}
-
-// Add click event to each gallery image
-document.querySelectorAll('.gallery-item img').forEach(img => {
-  img.onclick = () => openModal(img.src); // Open modal on image click
+document.addEventListener('DOMContentLoaded', function() {
+  // 초기 상태에서 모달을 숨김
+  const modal = document.getElementById('image-modal');
+  modal.style.display = 'none';
 });
+// Open Modal Function
+function openModal(element) {
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-image');
+
+  if (modal && modalImg) {
+    modal.style.display = 'flex'; // 모달 보이기
+    modalImg.src = element.querySelector('img').src; // 선택한 이미지의 src를 모달에 설정
+  }
+}
+
+// Close Modal Function
+function closeModal() {
+  const modal = document.getElementById('image-modal');
+  if (modal) {
+    modal.style.display = 'none'; // 모달 숨기기
+  }
+}

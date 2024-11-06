@@ -1,17 +1,118 @@
 ---
 layout: default
-title: Blog
+title:
 permalink: /blog.html
 ---
 
-<div class="section-container">
-  <h2>Blog Posts</h2>
-  <ul>
-    {% for post in site.posts %}
+<header>
+  <!-- Burger Menu Content -->
+  <input type="checkbox" id="burger-toggle">
+  <label for="burger-toggle" class="burger-menu">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </label>
+
+  <div class="menu">
+    <div class="menu-inner">
+      <ul class="menu-nav">
+        <li class="menu-nav-item"><a class="menu-nav-link" href="index.html"><div>About Me</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="experiences.html"><div>Experiences</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="project.html"><div>Project</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="gallery.html"><div>Places Mark's been to</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="blog.html"><div>Notes</div></a></li>
+        <li class="menu-nav-item"><a class="menu-nav-link" href="games.html"><div>Games</div></a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="section-container-category">
+  <h2>Latest</h2>
+  <ul id="post-list">
+    {% for post in site.posts limit:3 %}
       <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ post.url }}" class="brown-link">{{ post.title }}</a>
+
         <time>{{ post.date | date: "%B %-d, %Y" }}</time>
       </li>
     {% endfor %}
   </ul>
+  <button id="view-more" onclick="showAllPosts()">View More</button>
 </div>
+
+<div class="category-container">
+  <h2>Categories</h2>
+  <ul>
+    <li>
+      <h3 onclick="toggleCategory('aws')">AWS / Cloud Computing</h3>
+      <ul id="aws" class="category-list" style="display: none;">
+        {% for post in site.posts %}
+          {% if post.category == "aws" or post.category == "cloud computing" %}
+          <a href="{{ post.url }}" class="brown-link">{{ post.title }}</a>
+
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    <li>
+      <h3 onclick="toggleCategory('hardware')">Hardware Development</h3>
+      <ul id="hardware" class="category-list" style="display: none;">
+        {% for post in site.posts %}
+          {% if post.category == "hardware" or post.category == "hardware development" %}
+          <a href="{{ post.url }}" class="brown-link">{{ post.title }}</a>
+
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    <li>
+      <h3 onclick="toggleCategory('ml')">Machine Learning</h3>
+      <ul id="ml" class="category-list" style="display: none;">
+        {% for post in site.posts %}
+          {% if post.category == "ml" or post.category == "deep learning" %}
+          <a href="{{ post.url }}" class="brown-link">{{ post.title }}</a>
+
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+    <li>
+      <h3 onclick="toggleCategory('backend')">Backend and Databases</h3>
+      <ul id="backend" class="category-list" style="display: none;">
+        {% for post in site.posts %}
+          {% if post.category == "backend" or post.category == "databases" or post.category == "ds"%}
+          <a href="{{ post.url }}" class="brown-link">{{ post.title }}</a>
+
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+
+    <li>
+      <h3 onclick="toggleCategory('cs')">Software Engineering</h3>
+      <ul id="cs" class="category-list" style="display: none;">
+        {% for post in site.posts %}
+          {% if post.category == "cs" or post.category == "software engineering" %}
+          <a href="{{ post.url }}" class="brown-link">{{ post.title }}</a>
+
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<script>
+  function showAllPosts() {
+    document.getElementById('post-list').innerHTML = `{% for post in site.posts %}<li><a href="{{ post.url }}" class="brown-link">{{ post.title }}</a><time>{{ post.date | date: "%B %-d, %Y" }}</time></li>{% endfor %}`;
+    document.getElementById('view-more').style.display = 'none';
+    document.getElementById('view-more').style.color = '#8d6e63';  // 따뜻한 갈색
+
+  }
+
+  function toggleCategory(id) {
+    const categoryList = document.getElementById(id);
+    categoryList.style.display = categoryList.style.display === 'none' ? 'block' : 'none';
+  }
+</script>

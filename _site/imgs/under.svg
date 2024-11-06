@@ -1,0 +1,15 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#ffeb3b" />
+
+  <!-- Construction sign -->
+  <polygon points="40,180 100,20 160,180" fill="#333" />
+
+  <!-- Text -->
+  <text x="100" y="150" text-anchor="middle" fill="white" font-size="20" font-family="Arial, sans-serif">
+    Under
+  </text>
+  <text x="100" y="170" text-anchor="middle" fill="white" font-size="20" font-family="Arial, sans-serif">
+    Construction
+  </text>
+</svg>

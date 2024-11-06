@@ -3,103 +3,246 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project | Mark Jang</title>
+  <title>Projects | Mark Jang</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header>
-    <input type="checkbox" id="burger-toggle">
-  <label for="burger-toggle" class="burger-menu">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </label>
-
-  <!-- Burger Menu Content -->
-  <div class="menu">
-    <div class="menu-inner">
-      <ul class="menu-nav">
-        <li class="menu-nav-item"><a class="menu-nav-link" href="index.html"><span>
-              <div>About Me</div>
-            </span></a></li>
-        <li class="menu-nav-item"><a class="menu-nav-link" href="experiences.html"><span>
-              <div>Experiences</div>
-            </span></a></li>
-        <li class="menu-nav-item"><a class="menu-nav-link" href="project.html"><span>
-              <div>Project</div>
-            </span></a></li>
-        <li class="menu-nav-item"><a class="menu-nav-link" href="gallery.html"><span>
-              <div>Places Mark's been to</div>
-            </span></a></li>
-        <li class="menu-nav-item"><a class="menu-nav-link" href="blog.html"><span>
-              <div>Notes</div>
-            </span></a></li>
-        <li class="menu-nav-item"><a class="menu-nav-link" href="games.html"><span>
-              <div>Games</div>
-            </span></a></li>
-      </ul>
-    </div>
-  </div>
   </header>
 
   <main class="page-content">
-    <div class="section-container">
-  <h2>Projects</h2>
+    <h1>Projects</h1>
+    <p class="project-description"></p>
+    <time></time>
 
-  <!-- Active Section -->
-  <h3>Active</h3>
-  <div class="project-section">
+
     
-      
-        <div class="card">
-          <h4><a href="/2024/11/03/sample-post.md.html">Sample Project</a></h4>
-          <p>This project focuses on building an innovative solution for..wnggkenwlkgnewlkgnwlkegnwelkgnwlekgnwelgnwegkwnglkewngwlkne. <a href="/2024/11/03/sample-post.md.html">Read More</a></p>
-          <time>November 3, 2024</time>
-        </div>
-      
-    
-      
-        <div class="card">
-          <h4><a href="/2024/11/03/AWS.html">Sample Project</a></h4>
-          <p> <a href="/2024/11/03/AWS.html">Read More</a></p>
-          <time>November 3, 2024</time>
-        </div>
-      
-    
-      
-        <div class="card">
-          <h4><a href="/2024/11/03/aws.html">Sample Project</a></h4>
-          <p>weiofjlwenglkwneglknw <a href="/2024/11/03/aws.html">Read More</a></p>
-          <time>November 3, 2024</time>
-        </div>
-      
-    
+      <div class="project-details">
+        <p><body>
+  <header>
+    <!-- Burger Menu Content -->
+    <input type="checkbox" id="burger-toggle">
+    <label for="burger-toggle" class="burger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+
+    <div class="menu">
+      <div class="menu-inner">
+        <ul class="menu-nav">
+          <li class="menu-nav-item"><a class="menu-nav-link" href="index.html"><div>About Me</div></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="experiences.html"><div>Experiences</div></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="project.html"><div>Project</div></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="gallery.html"><div>Places Mark's been to</div></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="blog.html"><div>Notes</div></a></li>
+          <li class="menu-nav-item"><a class="menu-nav-link" href="games.html"><div>Games</div></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="section-container">
+    <h4>Click each section to view the projects</h4>
+
+    <!-- Active Section -->
+    <h3 class="toggle-header" onclick="toggleSection('active-section', this)">Active <span class="toggle-icon">▶</span></h3>
+    <div id="active-section" class="project-section">
+      <div class="card-grid">
+        
+          
+        
+          
+            <div class="card">
+              <h4><a href="/hardware/2024/09/15/apple-tsmc-tapeout.html">Apple/TSMC Tapeout Project</a></h4>
+              <p>Implemented a CORDIC module using TSMC’s technology; involved in the entire tapeout process under Apple's guidance. <a href="/hardware/2024/09/15/apple-tsmc-tapeout.html">Read More</a></p>
+              <time>September 15, 2024</time>
+            </div>
+          
+        
+          
+        
+          
+            <div class="card">
+              <h4><a href="/ml/2024/08/01/hyundai-project.html">Hyundai Interface Design Project</a></h4>
+              <p>Lead software engineer for Hyundai Ioniq 6 interface design focused on driver confidence metrics and data-driven improvements. <a href="/ml/2024/08/01/hyundai-project.html">Read More</a></p>
+              <time>August 1, 2024</time>
+            </div>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </div>
+
+    <!-- Inactive Section -->
+    <h3 class="toggle-header" onclick="toggleSection('inactive-section', this)">Inactive <span class="toggle-icon">▶</span></h3>
+    <div id="inactive-section" class="project-section">
+      <div class="card-grid">
+        
+          
+        
+          
+        
+          
+            <div class="card">
+              <h4><a href="/ml/2024/09/01/RAG.html">Retrieval-Augmented Generation (RAG for MDF)</a></h4>
+              <p>Developed a secure chatbot to facilitate onboarding of researchers and interns, leveraging a custom-trained embedding model. <a href="/ml/2024/09/01/RAG.html">Read More</a></p>
+              <time>September 1, 2024</time>
+            </div>
+          
+        
+          
+        
+          
+            <div class="card">
+              <h4><a href="/ml/2024/07/10/bitcoin-trading-ddpg.html">Bitcoin Trading with DDPG</a></h4>
+              <p>Built a bitcoin trading model using Deep Deterministic Policy Gradient (DDPG) to optimize trade decisions. <a href="/ml/2024/07/10/bitcoin-trading-ddpg.html">Read More</a></p>
+              <time>July 10, 2024</time>
+            </div>
+          
+        
+          
+            <div class="card">
+              <h4><a href="/cs/2024/05/01/hp.html">Personal Project</a></h4>
+              <p>Project under supervision of innovate@BU. <a href="/cs/2024/05/01/hp.html">Read More</a></p>
+              <time>May 1, 2024</time>
+            </div>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </div>
+
+    <!-- Archive Section -->
+    <h3 class="toggle-header" onclick="toggleSection('archive-section', this)">Archive <span class="toggle-icon">▶</span></h3>
+    <div id="archive-section" class="project-section">
+      <div class="card-grid">
+        
+          
+            <div class="card">
+              <h4><a href="/ds/2024/11/05/dun-dun-dungeon.html">나의 첫 블로그 포스트</a></h4>
+              <p>이 포스트는 다양한 마크다운 기능을 보여줍니다. <a href="/ds/2024/11/05/dun-dun-dungeon.html">Read More</a></p>
+              <time>November 5, 2024</time>
+            </div>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <div class="card">
+              <h4><a href="/aws/2024/04/15/aws.html">AWS Serverless Photogallery</a></h4>
+              <p>Designed a photo service on AWS with RESTful APIs and cloud storage integration. <a href="/aws/2024/04/15/aws.html">Read More</a></p>
+              <time>April 15, 2024</time>
+            </div>
+          
+        
+          
+            <div class="card">
+              <h4><a href="/ds/2024/01/20/drone-dispatch.html">Drone Dispatch! Express Delivery</a></h4>
+              <p>Developed a database application for drone delivery service using MySQL and PHP. <a href="/ds/2024/01/20/drone-dispatch.html">Read More</a></p>
+              <time>January 20, 2024</time>
+            </div>
+          
+        
+          
+            <div class="card">
+              <h4><a href="/hardware/2023/12/05/electric-grid-kit.html">Electric Grid Educational Kit (GA K-6)</a></h4>
+              <p>Designed an educational kit for K-6 students using microBit, color-coded housings, and intuitive connections. <a href="/hardware/2023/12/05/electric-grid-kit.html">Read More</a></p>
+              <time>December 5, 2023</time>
+            </div>
+          
+        
+          
+            <div class="card">
+              <h4><a href="/hardware/2023/11/15/baby-processor.html">5-stage Pipelined Baby Processor</a></h4>
+              <p>Developed a pipelined microarchitecture and a cache simulator with writeback cache architecture. <a href="/hardware/2023/11/15/baby-processor.html">Read More</a></p>
+              <time>November 15, 2023</time>
+            </div>
+          
+        
+          
+            <div class="card">
+              <h4><a href="/hardware/2023/10/10/proximity-surveillance.html">Proximity Surveillance System</a></h4>
+              <p>Developed a real-time face recognition and proximity detection system using embedded C++ and Python. <a href="/hardware/2023/10/10/proximity-surveillance.html">Read More</a></p>
+              <time>October 10, 2023</time>
+            </div>
+          
+        
+          
+            <div class="card">
+              <h4><a href="/hardware/2023/09/01/fpga-design-project.html">FPGA Design Project</a></h4>
+              <p>Implemented a servo control system on DE-10 FPGA with automated movement and LED feedback. <a href="/hardware/2023/09/01/fpga-design-project.html">Read More</a></p>
+              <time>September 1, 2023</time>
+            </div>
+          
+        
+      </div>
+    </div>
   </div>
 
-  <!-- Inactive Section -->
-  <h3>Inactive</h3>
-  <div class="project-section">
-    
-      
-    
-      
-    
-      
-    
-  </div>
+</body>
 
-  <!-- Archive Section -->
-  <h3>Archive</h3>
-  <div class="project-section">
+
+
+<script>
+  function toggleSection(id, header) {
+    const section = document.getElementById(id);
+    const icon = header.querySelector(".toggle-icon");
+    if (section.style.display === 'none') {
+      section.style.display = 'block';
+      icon.textContent = '>';
+    } else {
+      section.style.display = 'none';
+      icon.textContent = '▶';
+    }
+  }
+
+  // Hide all sections by default
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('active-section').style.display = 'none';
+    document.getElementById('inactive-section').style.display = 'none';
+    document.getElementById('archive-section').style.display = 'none';
+  });
+</script>
+
+</p>
+      </div>
     
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
   </main>
 
   <footer>
