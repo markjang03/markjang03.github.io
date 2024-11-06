@@ -9,7 +9,6 @@
 <body>
   <header>
   </header>
-
   <main class="page-content">
     <h1>AWS Serverless Photogallery</h1>
     <p class="project-description">Designed a photo service on AWS with RESTful APIs and cloud storage integration.</p>
@@ -17,11 +16,31 @@
 
 
     
+      <a href="/blog.html" class="back-to-list-icon">
+        <img src="/imgs/back.svg" alt="Back to List" title="Back to List">
+      </a>
+
       <div class="centered-message nda-message">
+
         <img src="/imgs/nda.svg" alt="NDA">
         <p>This project is under NDA or we haven't received permission to share it publicly yet. Please contact us for more information!</p>
       </div>
+      <div class="navigation-buttons"></div>
+      
+        <a href="/ds/2024/03/01/buzzDB.html" class="nav-button">← Previous Post</a>
+      
+
+      <a href="/blog.html" class="nav-button">Back to List</a>
+
+      
+        <a href="/cs/2024/05/01/hp.html" class="nav-button">Next Post →</a>
+      
+      </div>
     
+
+
+
+
   </main>
 
   <footer>
@@ -29,3 +48,51 @@
   </footer>
 </body>
 </html>
+
+
+
+
+
+<style>
+  /* Back to List Icon Styling */
+  .back-to-list-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .back-to-list-icon img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s;
+  }
+
+  .back-to-list-icon:hover img {
+    transform: scale(1.1);
+  }
+
+  /* Navigation Buttons Styling */
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+  }
+
+  .nav-button {
+    background-color: #ad7111;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .nav-button:hover {
+    background-color: #c5800a;
+  }
+</style>

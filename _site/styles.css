@@ -1122,6 +1122,12 @@ code {
   float: left;
 }
 
+.category-list a {
+  display: block; /* 각 포스트 링크를 한 줄에 표시 */
+  padding: 2px 0; /* 항목 간 여백 추가 */
+  text-decoration: none;
+}
+
 .category-container {
   width: 25%;
   float: right;
@@ -1193,7 +1199,7 @@ code {
   margin-top: 10px;
   padding: 8px 12px;
   font-size: 1em;
-  background-color: #0073e6;
+  background-color: #a9630d;
   color: white;
   border: none;
   border-radius: 4px;
@@ -1201,7 +1207,7 @@ code {
 }
 
 #view-more:hover {
-  background-color: #005bb5;
+  background-color: #6c5233;
 }
 
 /* Clear floats after containers */
